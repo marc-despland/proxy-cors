@@ -1,0 +1,9 @@
+FROM node
+WORKDIR /app
+COPY . /app
+RUN npm install
+EXPOSE 8080
+ENV LISTEN_HOST 0.0.0.0
+ENV LISTEN_PORT 8080
+ENV DESTINATION wwW.google.fr
+ENTRYPOINT ["node", "index.js"]
