@@ -1,0 +1,11 @@
+version: "3.3"
+services:
+  proxy-cors:
+    image: proxy-cors
+    environment:
+      - LISTEN_PORT=1028
+      - DESTINATION=172.17.0.1:1026
+    ports:
+      - "1028:1028"
+    deploy:
+      replicas: 1
